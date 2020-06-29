@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <title>JavaScript Form Validation</title>
-</head>
+  </head>
 
-<body>
-    <form id="form" action="/" method="GET">
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required>
+  <body>
+    <div class="container">
+        <div class="header">
+            <h2>Formulario de registro</h2>
         </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+
+        <form class="form" id="form">
+
+        <div class="form-control">
+            <label>Usuario</label>
+            <input type="text" id="username" placeholder="Ingresa tu usuario">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Mensaje de error</small>
         </div>
-        <button type="submit">Submit</button>
-    </form>
-    <br>
-    <div id="error"></div>
+
+        <div class="form-control">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="ingresa@tuemail.com">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Mensaje de error</small>
+        </div>
+
+        <div class="form-control">
+            <label>Contraseña</label>
+            <input type="password" id="password" placeholder="Ingresa tu contraseña">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Mensaje de error</small>
+        </div>
+
+        <div class="form-control">
+            <label>Repite tu contraseña</label>
+            <input type="password" id="password2" placeholder="Repite tu contraseña">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Mensaje de error</small>
+        </div>
+        <button type="submit">Enviar</button>
+        </form>
+    </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
