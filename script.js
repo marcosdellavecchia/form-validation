@@ -11,7 +11,8 @@ form.addEventListener("submit", (e) => {
 });
 
 function checkInputs() {
-  //Get the values from inputs
+  //Get the values from the inputs.
+  //trim() is used to remove white spaces from the input values.
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
@@ -43,6 +44,8 @@ function checkInputs() {
     setErrorFor(password, "Tu contraseña debe contener al menos 1 numero.");
   } else if (!hasCapital(passwordValue)){
     setErrorFor(password, "Tu contraseña debe contener letras mayúsculas.");
+  } else if (!hasSpecial(passwordValue)){
+    setErrorFor(password, "Incluye al menos 1 caracter especial: !@#$%^&*");
   } else {
     setSuccessFor(password);
   }
@@ -57,13 +60,13 @@ function checkInputs() {
 }
 
 function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
+  const formControl = input.parentElement; //Targets form-control div
+  const small = formControl.querySelector("small"); //Target small tag
 
   //Add error message inside small
   small.innerText = message;
 
-  //Add error class
+  //Add error class to form-control div
   formControl.className = "form-control error";
 }
 
@@ -87,4 +90,9 @@ function hasNumber(password) {
 //Checks if password has a capital letter on it
 function hasCapital(password) {
   return /^(.*[A-Z].*)$/.test(password);
+}
+
+//Checks if password has special characters on it (!@#$%^&*)
+function hasSpecial(password) {
+  return /(?=.*[!@#$%^&*])/.test(password);
 }

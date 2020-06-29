@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(#9b59b6, #4439af);
+    background: linear-gradient(#80ffdb, #6930c3);
     font-family: 'Open Sans', sans-serif;
     display: flex;
     align-items: center;
@@ -94,8 +94,8 @@ body {
 }
 
 .form button {
-    background: #4439af;
-    border: 2px solid #4439af;
+    background: #6930c3;
+    border: 2px solid #6930c3;
     border-radius: 4px;
     color: #ffffff;
     display: block;
@@ -107,7 +107,7 @@ body {
 }
 
 form button:hover {
-    background: #6c39af;
-    border-color: #6c39af;
+    background: #5e60ce;
+    border-color: #5e60ce;
 }
 
