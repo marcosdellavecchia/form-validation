@@ -8,6 +8,7 @@
 - Password can't have more than 20 characters.
 - Password must include at least 1 number.
 - Password must include at least 1 capital letter.
+- Password must include at least 1 special character (!@#$%^&*)
 - Password 2 (check) must be the same as password 1.
 
 CSS features:
