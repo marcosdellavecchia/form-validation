@@ -19,11 +19,11 @@ function checkInputs() {
   const password2Value = password2.value.trim();
 
   if (usernameValue === "") {
-    setErrorFor(username, "Tu nombre de usuario no puede estar en blanco.");
+    setErrorFor(username, "Debes ingresar un nombre de usuario.");
   } else if (usernameValue.length < 3) {
     setErrorFor(username, "Tu usuario debe tener al menos 3 caracteres.");
   } else if (usernameValue.length > 20) {
-    setErrorFor(username, "Tu usuario no puede tener más de 20 caracteres.");
+    setErrorFor(username, "Tu usuario debe tener menos de 20 caracteres.");
   } else {
     setSuccessFor(username);
   }
@@ -41,11 +41,11 @@ function checkInputs() {
   } else if (passwordValue.length < 6) {
     setErrorFor(password, "Tu contraseña debe tener al menos 6 caracteres.");
   } else if (!hasNumber(passwordValue)) {
-    setErrorFor(password, "Tu contraseña debe contener al menos 1 numero.");
+    setErrorFor(password, "Tu contraseña debe contener números.");
   } else if (!hasCapital(passwordValue)){
-    setErrorFor(password, "Tu contraseña debe contener letras mayúsculas.");
+    setErrorFor(password, "Tu contraseña debe contener mayúsculas.");
   } else if (!hasSpecial(passwordValue)){
-    setErrorFor(password, "Incluye al menos 1 caracter especial: !@#$%^&*");
+    setErrorFor(password, "Debes incluir un caracter especial: !@#$%^&*");
   } else {
     setSuccessFor(password);
   }
